@@ -80,6 +80,9 @@ export const yuqueConfig: IYuqueConfig = {
 
 访问 <localhost:3001/swagger>
 
+![image](https://user-images.githubusercontent.com/18508817/183946136-cebfeb5d-094f-4641-9540-f480ee0bd138.png)
+
+
 #### 构建 nestjs 项目
 
 ```sh
