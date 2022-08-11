@@ -29,6 +29,7 @@
     "format": "npm run lint -- --fix && prettier --write 'src/**.{js,ts,tsx}'"
   },
   "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "npm run lint",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
       "prettier --write"
     ]

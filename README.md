@@ -99,6 +99,46 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## 文件结构说明
+
+```text
+nestjs-yuque
+├── coverage                                * Coverage reports after running `yarn coverage` command.
+├── dist                                    * Optimized code for production after `yarn build` is run.
+├── src
+│   └── <module>                            * Folder where specific modules all files are stored
+│       └── dto                             * Data Transfer Objects.
+│       └── entity                          * Models for module.
+│       └── pipes                           * Includes validation pipes for NestJS modules.
+│       └── serializer                      * Includes serializer for model data.
+│       └── <module>.controller.ts          * Controller file.
+│       └── <module>.controller.spec.ts     * Test file for Controller.
+│       └── <module>.module.ts              * root module file for module.
+│       └── <module>.service.ts             * Service file for <module>.
+│       └── <module>.service.spec.ts        * Test file for service.
+│       └── <module>.repository.ts          * Repository file for <module>.
+│       └── <module>.repository.spec.ts     * Test file for repository.
+│   └── common                              * Common helpers function, dto, entity, exception, decorators etc.
+│   └── config                              * Configuration variables files.
+│   └── app.module.ts                       * Root module of the application.
+│   └── main.ts                             * The entry file of the application which uses the core function NestFactory to create a Nest application instance.
+├── test                                    * Contains E2E tests
+```
+
+**一些比较重要的根配置文件**
+
+```text
+.
+├── .editorconfig                           * Coding styles (also by programming language).
+├── .env                                    * Environment variables for docker.
+├── .prettierrc.js                          * Formatting Prettier options.
+├── .eslintrc.js                            * ESLint configuration and rules.
+├── .docker-compose.yml                     * Docker compose configuration.
+├── Dockerfile                              * Docker file for prod environment.
+├── Dockerfile.dev                          * Docker file for dev environment.
+├── tsconfig.json                           * Typescript configuration for application.
+```
+
 ## 其他说明
 
 - Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
